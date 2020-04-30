@@ -1,0 +1,103 @@
+.App {
+  width: 750px;
+  height: 200px;
+  background: #f27a7a;
+  color: #ffffff;
+  line-height: 200px;
+  text-align: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+/*兼容ios不显示图片问题*/
+img {
+  content: normal !important;
+}
+.haha{
+  width:100px;
+  height: 150px;
+  background: greenyellow;
+  font-size: 28px;
+  color: #333;
+}
+.nihao{
+  position: relative;
+  display: block;
+  font-size: 28px;
+  width: 500px;
+  height: 500px;
+  background: #f27a7a;
+  text-align: center;
+  line-height: 500px;
+  border-radius: 50%;
+}
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+/*1px 问题，解决方案*/
+
+/*1px 解决方案*/
+
+@svg square {
+    @rect {
+        fill: var(--color, white);
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.example-line {
+    width: 100%;
+    background: white svg(square param(--color #E6E6E6));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+/*1px 解决方案*/
+
+/*伪元素1px*/
+
+.row-cell:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+    z-index: 2;
+}
